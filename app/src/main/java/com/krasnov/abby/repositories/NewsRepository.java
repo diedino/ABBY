@@ -97,6 +97,6 @@ public class NewsRepository {
         int mDay = calendar.get(Calendar.DAY_OF_MONTH);
         int mHour = calendar.get(Calendar.HOUR_OF_DAY);
         int mMinutes = calendar.get(Calendar.MINUTE);
-        return String.format("%d.%d.%d %02d:%02d",mDay, mMonth, mYear, mHour, mMinutes);
+        return String.format("%02d.%02d.%d %02d:%02d",mDay, mMonth, mYear, mHour, mMinutes);
     }
 }
