@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -54,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         initRecyclerView();
         Log.d(TAG, "RecycleView is inited");
+
+        mRecycleView.addItemDecoration(new DividerItemDecoration(getApplicationContext(),
+                DividerItemDecoration.VERTICAL));
 
         mMainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel.class);
         
